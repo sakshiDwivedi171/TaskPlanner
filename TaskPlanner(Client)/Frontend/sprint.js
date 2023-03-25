@@ -1,21 +1,20 @@
 
 
-let getItems = async() =>{
+let getItems = async () => {
 
-    let url = `http://127.0.0.1:3000/api/items`;
+    let url = `http://localhost:8081/tasks/getAllTasks`;
 
     let res = await fetch(url);
 
     let data = await res.json();
-    //console.log(data);
+    console.log(data);
 
     Append(data);
 
 }
 getItems();
 
-
-let Append = (array)=>{
+let Append = (array) => {
     console.log(array)
 
     let Container = document.querySelector('#added-items');
@@ -24,30 +23,33 @@ let Append = (array)=>{
     array.forEach(element => {
         let box = document.createElement('div');
         box.setAttribute("id", "box")
-        
-        let box1 = document.createElement('div');
-        box1.setAttribute("id", "box1")
-        let box2 = document.createElement('div');
-        box2.setAttribute("id", "box2")
-        let box3 = document.createElement('div');
-        box3.setAttribute("id", "box3")
 
-        let IMG = document.createElement('img');
-        let TIT = document.createElement('h3');
-        let PRI = document.createElement('h4');
-        let RAT = document.createElement('P');
-        let DES = document.createElement('P');
+        let actualTime = document.createElement('h3');
+        let assignee = document.createElement('h3');
+        let description = document.createElement('h4');
+        let dueDate = document.createElement('h3');
+        let estimatedTime = document.createElement('h3');
+        let id = document.createElement('h3');
+        let priority = document.createElement('h3');
+        let status = document.createElement('h3');
+        let title = document.createElement('h3');
+        let type = document.createElement('h3');
 
-        IMG.src = element.image;
-        TIT.textContent = element.title;
-        PRI.textContent = "Rs. "+ element.price;
-        RAT.textContent = "Rating: "+ element.rating+"/10";
-        DES.textContent = "Description: "+ element.description;
 
-        box1.append(IMG);
-        box2.append(TIT,PRI,DES);
-        box3.append(RAT);
-        box.append(box1,box2,box3);
+        actualTime.textContent = "Actual Time: " + element.actualTime + " Days";
+        assignee.textContent = "Assign to: " + element.assignee;
+        description.textContent = "Task Description: " + element.description;
+        dueDate.textContent = "Due Date: " + element.dueDate;
+        estimatedTime.textContent = "Estimate Time: " + element.estimatedTime;
+        id.textContent = "Task ID: " + element.id;
+        priority.textContent = "Priority: " + element.priority;
+        status.textContent = "Task Status: " + element.status;
+        title.textContent = "Task Title: " + element.title;
+        type.textContent = "Type of Task: " + element.type;
+
+
+
+        box.append(actualTime, assignee, description, dueDate, estimatedTime, id, priority, status, title, type);
 
         Container.append(box)
 
@@ -56,13 +58,11 @@ let Append = (array)=>{
 }
 
 
+let filterbyPriority = async () => {
 
-// sorting - filtering
+    let name = document.querySelector("#priority-filter").value;
 
-
-let sortbyPrice = async () =>{
-
-    let url = `http://127.0.0.1:3000/api/items/?_sort=price&_order=asc`;
+    let url = `http://localhost:8081/tasks/filterByPriority/${name}`;
 
     let res = await fetch(url);
 
@@ -74,9 +74,11 @@ let sortbyPrice = async () =>{
 
 }
 
-let filterbyRating = async () =>{
+let filterbyStatus = async () => {
 
-    let url = `http://127.0.0.1:3000/api/items/?rating_gte=4`;
+    let name = document.querySelector("#status-filter").value;
+
+    let url = `http://localhost:8081/tasks/filterByStatus/${name}`;
 
     let res = await fetch(url);
 

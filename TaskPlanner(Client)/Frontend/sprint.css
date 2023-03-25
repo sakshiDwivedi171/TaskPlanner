@@ -1,8 +1,9 @@
+
 #navbar{
     display: flex;
     justify-content: space-around;
     color: white;
-    background-color: rgb(34, 34, 81);
+    background-color:  rgb(61, 61, 68);
     margin-bottom:50px ;
 }
 a{
@@ -10,51 +11,44 @@ a{
     color: white;
 }
 
-#sort-filter{
+#priority-status{
     width: 83%;
     margin: auto;
     padding: 15px;
     display: flex;
     justify-content: center;
     gap: 10%;
+    background-color: rgb(80, 76, 76);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-#sort-price{
+#priority-filter{
     border: none;
     color: white;
     background-color: dodgerblue;
     padding: 10px;
     font-size: medium;
+    border-radius: 4px;
 }
-#filter-rating{
+#status-filter{
     border: none;
     color: white;
     background-color: dodgerblue;
     padding: 10px;
     font-size: medium;
+    border-radius: 4px;
 }
 
 #added-items{
+    display: flex;
     width: 85%;
+    column-gap: 10px;
     margin: auto;
     padding: 10px;
 }
 #box{
-    display: flex;
-    gap: 20px;
+    width: 30%;
     padding: 10px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-#box>div{
-    width: 30%;
 
-}
-#box2,#box3{
-    border-left: 1px solid grey;
-    padding-left: 10px;
-    font-size: large;
-}
-#box>div>img{
-    width: 100%;
-    height: 100%;
-}
+

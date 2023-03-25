@@ -1,22 +1,39 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./menu.css">
+    <title>Sprint Page</title>
+    <link rel="stylesheet" href="./sprint.css">
 </head>
+
 <body>
     <div id="navbar">
         <h3 id="sign-log_page"><a href="./index.html">Home</a></h3>
-        <h3 id="menu_page"><a href="#sprint.html">Menu</a></h3>
+        <h3 id="sprint_page"><a href="./sprint.html">Sprint</a></h3>
+        <h3 id="addTask"><a href="./task.html">Add Task</a> </h3>
     </div>
-    <div id="sort-filter">
-        <button id="sort-price" onclick="sortbyPrice()">Sort by price low to high</button>
-        <button id="filter-rating" onclick="filterbyRating()">Filter by Rating above 4 </button>
+    <div id="priority-status">
+
+        <select id="priority-filter" onclick="filterbyPriority()">
+            <option value="">Filter By Priority</option>
+            <option value="low">Low</option>
+            <option value="high">High</option>
+            <option value="medium">Medium</option>
+        </select>
+        <select id="status-filter" onclick="filterbyStatus()">
+            <option value="">Fliter By Task Status</option>
+            <option value="toDo">To Do</option>
+            <option value="in_progress">In Progress</option>
+            <option value="testing">Testing</option>
+            <option value="done">Done</option>
+        </select>
+        
     </div>
 
     <div id="added-items"></div>
 </body>
+
 </html>
 <script src="./sprint.js"></script>

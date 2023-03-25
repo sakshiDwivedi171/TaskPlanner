@@ -1,9 +1,13 @@
+body{
+    background-image: url("img1.jpg");
+}
+
 #navbar{
     display: flex;
     justify-content: space-around;
     color: white;
-    background-color: rgb(34, 34, 81);
-    margin-bottom: 100px;
+    background-color: rgb(61, 61, 68);
+    margin-bottom: 50px;
 }
 a{
     text-decoration: none;
@@ -11,9 +15,10 @@ a{
 }   
 
 #add_items{
+    background-color: rgb(236, 236, 241);
     text-align: center;
     color: blue;
-    width: 18%;
+    width: 30%;
     font-size: large;
     margin: auto;
     height: auto;
@@ -38,4 +43,21 @@ input{
 }
 #submit:hover{
     color: yellow;
+}
+
+#type{
+    padding: 5px;
+    font-size: medium;
+    width: 100%; 
+}
+#status{
+    padding: 5px;
+    font-size: medium;
+    width: 100%;
+}
+
+#priority{
+    padding: 5px;
+    font-size: medium;
+    width: 100%;
 }

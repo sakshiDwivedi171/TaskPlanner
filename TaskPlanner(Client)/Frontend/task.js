@@ -23,7 +23,6 @@ let addItems = async () => {
     let status = document.querySelector('#status').value;
     let assignee = document.querySelector('#assignee').value;
     let priority = document.querySelector('#priority').value;
-
     let estimatedTime = document.querySelector('#estimatedTime').value;
     let actualTime = document.querySelector('#actualTime').value;
     let dueDate = document.querySelector('#dueDate').value;
@@ -42,6 +41,13 @@ let addItems = async () => {
 
     console.log(Data)
 
+
+    document.querySelector("#title").value = "";
+    document.querySelector("#description").value = "";
+    document.querySelector("#assignee").value = "";
+    document.querySelector("#estimatedTime").value = "";
+    document.querySelector("#actualTime").value = "";
+    document.querySelector("#dueDate").value = "";
 }
 
 

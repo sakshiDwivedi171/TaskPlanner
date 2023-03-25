@@ -18,6 +18,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.paypal.enums.TaskPriority;
+import com.paypal.enums.TaskStatus;
 import com.paypal.model.Sprint;
 import com.paypal.model.Task;
 import com.paypal.repository.TaskRepository;
@@ -92,6 +94,19 @@ public class TaskController {
 		
 		return new ResponseEntity<>(HttpStatus.OK);
 	}
+	
+	@GetMapping("/filterByPriority/{priority}")
+	public ResponseEntity<List<Task>> filterByTaskPriority(@PathVariable TaskPriority priority){
+		
+		return new ResponseEntity<List<Task>>(taskRepository.findByPriority(priority), HttpStatus.OK);
+	}
+	
+	@GetMapping("/filterByStatus/{status}")
+	public ResponseEntity<List<Task>> filterByTasStatus(@PathVariable TaskStatus status){
+		
+		return new ResponseEntity<List<Task>>(taskRepository.findByStatus(status), HttpStatus.OK);
+	}
+	
 	
 	
 
