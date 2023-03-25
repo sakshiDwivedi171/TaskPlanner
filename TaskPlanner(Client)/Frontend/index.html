@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div id="navbar">
+        <h3 id="sign-log_page"><a href="./index.html">Home</a></h3>
+        <h3 id="menu_page"><a href="./sprint.html">Menu</a></h3>
+    </div>
+    <div id="sig-log">
+        
+        <form id="sign" onsubmit="SignupForm(event)">
+            <h3 id="si">Sign up Form</h3>
+            <input type="text" id="userName" placeholder="userName"><br><br>
+            <input type="email" id="userEmail" placeholder="userEmail"> <br><br>
+            <input type="password" id="password" placeholder="password"><br><br>
+            <select name="userRole" id="userRole">
+                <option value="none">User Role</option>
+                <option value="admin">Admin</option>
+                <option value="tester">Tester</option>
+                <option value="developer">Developer</option>
+                 <option value="project_manager">Project Manager</option>
+            </select><br><br>
+
+            <button id="submit">Sign Up</button>
+        </form>
+        <form id="login" onsubmit="LoginForm()">
+            <h3 id="lo">Login</h3>
+            <input type="text" id="emailId-L" placeholder="emailId"><br><br>
+            <input type="password" id="password-L" placeholder="password"><br><br>            
+
+            <button id="submit-L">Login</button>
+        </form>
+    </div>
+</body>
+</html>
+<script src="./index.js"></script>
+
+<!-- developer,tester,project_manager,admin,
+ -->
+
+<!-- private String userName;      //Name: (String) the user's name
+	private String userEmail;     //Email: (String) the user's email address
+	
+	private String password;
+	
+	@Enumerated(EnumType.STRING)
+	private  UserRole userRole; -->

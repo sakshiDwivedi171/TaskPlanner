@@ -1,0 +1,41 @@
+#navbar{
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    background-color: rgb(34, 34, 81);
+    margin-bottom: 100px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}   
+
+#add_items{
+    text-align: center;
+    color: blue;
+    width: 18%;
+    font-size: large;
+    margin: auto;
+    height: auto;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+}
+input{
+    padding: 5px;
+    font-size: medium;
+    width: 100%;
+}
+
+#submit{
+    padding: 5px;
+    width: 100%;
+    font-size: medium;
+    color: white;
+    background-color: dodgerblue;
+    border: none;
+    cursor: pointer;
+}
+#submit:hover{
+    color: yellow;
+}

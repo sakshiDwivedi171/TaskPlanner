@@ -1,0 +1,73 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./admin.css">
+</head>
+
+<body>
+    <div id="navbar">
+        <h3 id="sign-log_page"><a href="./index.html">Home</a></h3>
+        <h3 id="menu_page"><a href="./sprint.html">Menu</a></h3>
+    </div>
+    <div id="add_items">
+        <h3>Add Tasks todo</h3>
+        <select name="type" id="type">
+            <option value="choose">Choose</option>
+            <option value="bug">Bug</option>
+            <option value="feature">Feature</option>
+            <option value="story">Story</option>
+        </select><br><br>
+        <input type="text" name="title" id="title" placeholder=" title"><br><br>
+        <input type="text" name="description" id="description" placeholder=" description"><br><br>
+        <select name="status" id="status">
+            <option value="to_do">ToDo</option>
+            <option value="in_progress">In Progress</option>
+            <option value="testing">Testing</option>
+            <option value="done">DONE</option>
+        </select><br><br>
+        <input type="text" name="assignee" id="assignee" placeholder=" Assignee"><br><br>
+        <select name="priority" id="priority">
+            <option value="low">low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+        </select><br><br>
+        <input type="number" name="estimatedTime" id="estimatedTime" placeholder=" Estimated Time"><br><br>
+        <input type="number" name="actualTime" id="actualTime" placeholder=" Actual Time"><br><br>
+        <input type="date" name="dueDate" id="dueDate" placeholder=" Due Date"><br><br>
+        <button id="submit" onclick="addItems()">Submit</button>
+    </div>
+</body>
+
+</html>
+<script src="./task.js"></script>
+
+
+
+<!-- private TaskType type;
+    
+    private String title;
+    
+    private String description;
+    
+    @Enumerated(EnumType.STRING)
+    private TaskStatus status;
+    
+    private String assignee;
+    
+    @Enumerated(EnumType.STRING)
+    private TaskPriority priority;
+    
+    private Integer estimatedTime;
+    
+    private Integer actualTime;
+    
+    private LocalDate dueDate;
+    
+    @ManyToOne
+    @JoinColumn(name = "sprint_id")
+    @JsonIgnore
+    private Sprint sprint; -->

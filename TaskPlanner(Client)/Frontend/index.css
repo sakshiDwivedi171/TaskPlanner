@@ -1,0 +1,58 @@
+#navbar{
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    background-color: rgb(34, 34, 81);
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-size: large;
+}
+#sig-log{
+    display: flex;
+    justify-content: space-around;
+    margin-top:100px ;
+}
+
+#sign{
+    text-align: center;
+    color: blue;
+    font-size: large;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+#login{
+    text-align: center;
+    color: blue;
+    font-size: large;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    height: 200px;
+}
+input{
+    padding: 5px;
+    font-size: medium;
+
+}
+select{
+    padding: 5px;
+    padding-left: 50px;
+    padding-right: 55px ;
+    font-size: medium;
+}
+#submit, #submit-L{
+    padding: 5px;
+    width: 100%;
+    font-size: medium;
+    color: white;
+    background-color: dodgerblue;
+    border: none;
+    cursor: pointer;
+}
+#submit-L:hover{
+    color: yellow;
+}
+#submit:hover{
+    color: yellow;
+}
