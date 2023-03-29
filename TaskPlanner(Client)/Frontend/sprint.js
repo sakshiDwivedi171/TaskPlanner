@@ -2,7 +2,7 @@
 
 let getItems = async () => {
 
-    let url = `http://localhost:8081/tasks/getAllTasks`;
+    let url = `https://taskplannerapi.onrender.com/tasks/getAllTasks`;
 
     let res = await fetch(url);
 
@@ -62,7 +62,7 @@ let filterbyPriority = async () => {
 
     let name = document.querySelector("#priority-filter").value;
 
-    let url = `http://localhost:8081/tasks/filterByPriority/${name}`;
+    let url = `https://taskplannerapi.onrender.com/tasks/filterByPriority/${name}`;
 
     let res = await fetch(url);
 
@@ -78,7 +78,7 @@ let filterbyStatus = async () => {
 
     let name = document.querySelector("#status-filter").value;
 
-    let url = `http://localhost:8081/tasks/filterByStatus/${name}`;
+    let url = `https://taskplannerapi.onrender.com/tasks/filterByStatus/${name}`;
 
     let res = await fetch(url);
 

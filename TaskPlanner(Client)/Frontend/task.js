@@ -33,7 +33,7 @@ let addItems = async () => {
     let stringy_data = JSON.stringify(data)
     // console.log(stringy_data)
 
-    let url = `http://localhost:8081/tasks/createTask`;
+    let url = `https://taskplannerapi.onrender.com/tasks/createTask`;
 
     let response = await fetch(url, { method: 'POST', body: stringy_data, headers: { 'Content-Type': 'application/json' } });
 

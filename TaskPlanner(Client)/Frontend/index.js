@@ -12,7 +12,7 @@ let SignupForm = async (event) => {
     let Sign_strigify = JSON.stringify(sign_obj);
     console.log(Sign_strigify);
 
-    let API_url = `http://localhost:8081/userRegister`;
+    let API_url = `https://taskplannerapi.onrender.com/userRegister`;
 
     let response = await fetch(API_url, { method: 'POST', body: Sign_strigify, headers: { 'Content-Type': 'application/json' } })
 
@@ -40,7 +40,7 @@ let LoginForm = async () => {
     let Login_strigify = JSON.stringify(Login_obj);
     // console.log(Login_strigify);
 
-    let API_url = `http://localhost:8081/login`;
+    let API_url = `https://taskplannerapi.onrender.com/login`;
 
     let response = await fetch(API_url, { method: 'POST', body: Login_strigify, headers: { 'Content-Type': 'application/json' } })
 
